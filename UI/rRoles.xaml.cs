@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using RegistroDetalleAct.Entidades;
+
 
 namespace RegistroDetalleAct.UI
 {
@@ -19,6 +21,9 @@ namespace RegistroDetalleAct.UI
     /// </summary>
     public partial class rRoles : Window
     {
+        private Roles rol = new Roles();
+
+        private Permisos permiso = new Permisos();
         public rRoles()
         {
             InitializeComponent();
