@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RegistroDetalleAct.UI;
 
 namespace RegistroDetalleAct
 {
@@ -23,6 +24,12 @@ namespace RegistroDetalleAct
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegistroRolesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rRoles registro = new rRoles();
+            registro.Show();
         }
     }
 }

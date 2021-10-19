@@ -154,5 +154,27 @@ namespace RegistroDetalleAct.UI
                 Limpiar();
             }
         }
+
+        private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Validar())
+                return;
+
+            rol.RolesDetalle.Add(new RolesDetalle(rol.RolId, (int)PermisosComboBox.SelectedValue, ActivoCheckBox.IsEnabled));
+
+            Cargar();
+
+        }
+
+
+        private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
+            {
+                rol.RolesDetalle.RemoveAt(DetalleDataGrid.SelectedIndex);
+
+                Cargar();
+            }
+        }
     }
 }
